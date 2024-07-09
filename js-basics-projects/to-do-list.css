@@ -1,0 +1,30 @@
+.todo-grid, .todo-input-grid {
+  display: grid;
+  grid-template-columns: 200px 150px 100px;
+  column-gap: 20px;
+  row-gap: 15px;
+  align-items: center;
+}
+.todo-input-grid {
+  margin-bottom: 15px;
+  align-items: stretch;
+}
+.name-input, .date-input {
+  font-size: 15px;
+  padding: 6px;
+}
+.add-button {
+  background-color: green;
+  color: white;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+}
+.delete-button {
+  background-color: darkred;
+  color: white;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}

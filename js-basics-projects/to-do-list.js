@@ -19,18 +19,19 @@ function rendertodoList() {
     const { name, dueDate } = todoObject;
 
     const htmlText = `
-    <p>
-    ${name} ${dueDate}
-    <button onclick="
-    toDoList.splice(${i}, 1);
-    rendertodoList();
-    ">Delete</button>
-    </p>`;
+   <div>${name}</div>
+   <div>${dueDate}</div>
+   <button onclick="
+   toDoList.splice(${i}, 1);
+   rendertodoList();
+   " class="delete-button">Delete</button>
+
+    `;
     toDoListHTML += htmlText;
 
   }
   // console.log(toDoListHTML);
-  document.querySelector('.container').innerHTML = toDoListHTML;
+  document.querySelector('.js-todo-list').innerHTML = toDoListHTML;
   }
 
 // Practice 1
