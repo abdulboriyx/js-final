@@ -98,3 +98,36 @@ for (i = 0; i < array.length; i++) {
 }
 
 console.log(tripledArray);
+
+// .slice()
+const array1 = [1, 2, 3];
+const array2 = array1.slice();
+
+array2.push(4);
+console.log(array1);
+console.log(array2);
+
+// destructuring
+const array3 = [1, 2, 3];
+const [firstValue, secondValue] = [1, 2, 3];
+console.log(firstValue, secondValue);
+
+// break & continue
+for (i = 1; i <= 10; i++) {
+  if (i % 2 === 0) {
+    continue;
+  }
+  console.log(i);
+if (i === 8) {
+  break;
+}
+}
+function doubleArray(nums) {
+const numberDoubled = [];
+for (i = 0; i < nums.length; i++) {
+  const num = nums[i];
+  numberDoubled.push(num * 2);
+}
+console.log(numberDoubled);
+}
+doubleArray([1, 2, 3]);
