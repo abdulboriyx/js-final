@@ -14,25 +14,35 @@ rendertodoList();
 function rendertodoList() {
  let toDoListHTML = '';
 
- toDoList.forEach(function(todoObject, index) {
+ toDoList.forEach((todoObject, index) => {
   const { name, dueDate } = todoObject;
 
   const htmlText = `
    <div>${name}</div>
    <div>${dueDate}</div>
-   <button onclick="
-   toDoList.splice(${index}, 1);
-   rendertodoList();
-   " class="delete-button">Delete</button>
+   <button class="delete-button js-delete-button">Delete</button>
 
     `;
     toDoListHTML += htmlText;
  })
   // console.log(toDoListHTML);
   document.querySelector('.js-todo-list').innerHTML = toDoListHTML;
+
+  document.querySelectorAll('.js-delete-button').forEach((deleteButton, index) =>{
+    deleteButton.addEventListener('click', ()=>{
+      toDoList.splice({index}, 1);
+      rendertodoList();
+    })
+  })
+
   }
 
 // Practice 1
+
+document.querySelector('.js-add-button').addEventListener('click', ()=>{
+  addToDo();
+});
+
 function addToDo() {
  const inputElem = document.querySelector('.name-input');
  const name = inputElem.value;

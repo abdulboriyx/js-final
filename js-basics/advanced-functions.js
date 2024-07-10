@@ -63,9 +63,46 @@ clearInterval(idInterval);
   'Read Ben Fraklin',
   'Code on Foundation',
   'Listen to Lex Fridman podcast'
-].forEach(function(value) {
+].forEach((value) => {
   if (value === 'Code on Foundation') {
     return;
   }
   console.log(value);
 })
+
+// arrow Functions
+const arrowFun = () => {
+  console.log('Hello');
+};
+arrowFun();
+
+// shortcut
+const oneParam = param => {
+  console.log((param + 2) / 2);
+}
+oneParam(4);
+
+// .addEventListener
+const eventFun = ()=>{
+  console.log('click');
+};
+
+const buttonElem = document.querySelector('.button-class');
+
+buttonElem.addEventListener('click', eventFun);
+
+buttonElem.removeEventListener('click', eventFun);
+
+buttonElem.addEventListener('click', ()=>{
+  console.log('click-zero');
+});
+
+// filter
+console.log([1, -7, 5].filter((value, index) =>{
+  return value >= 0;
+}));
+
+// map
+console.log([1, 1, 3].map((value, index) => {
+  return value * 2;
+}));

@@ -74,5 +74,3 @@ function updateButton() {
     button.innerHTML = 'Finished';
   }, 1000);
 };
-
-// 5th
