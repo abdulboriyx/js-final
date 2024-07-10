@@ -42,3 +42,37 @@ for (i = 0; i <    arrayZero.length; i++) {
 
 }
 console.log(arrayX);
+
+// Advanced Functions
+
+const add = function calculate() {
+  console.log(2+3);
+}
+add();
+// 2nd
+function runTwice(fun) {
+  fun();
+  fun();
+}
+
+runTwice(function() {
+  console.log('12b');
+})
+runTwice(add);
+
+// 3rd
+setTimeout(function() {
+  document.querySelector('.start-button').innerHTML = 'Finished!';
+}, 1000);
+
+// 4th
+function updateButton() {
+  const button = document.querySelector('.button-class');
+
+  button.innerHTML = 'Loading...';
+  setTimeout(function() {
+    button.innerHTML = 'Finished';
+  }, 1000);
+};
+
+// 5th
