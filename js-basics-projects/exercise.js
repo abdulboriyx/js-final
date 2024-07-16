@@ -74,3 +74,32 @@ function updateButton() {
     button.innerHTML = 'Finished';
   }, 1000);
 };
+
+
+// Advanced function
+const multiply = (a, b)=>{
+  return a * b;
+
+}
+console.log(multiply(2, 3));
+
+// greater than zero
+function positiveNum(nums) {
+let positiveNumbers = 0;
+
+nums.forEach((num) =>{
+  if (num > 0) {
+positiveNumbers++;
+  }
+})
+return positiveNumbers;
+}
+console.log(positiveNum([-1]));
+
+// map
+function addNum(array, xray) {
+return array.map((value) =>{
+return  value + xray;
+})
+}
+console.log(addNum([1, 2, 3], 2));
